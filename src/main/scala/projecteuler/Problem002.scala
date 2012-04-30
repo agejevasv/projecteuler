@@ -8,15 +8,11 @@ object Problem002 {
   }
   
   def solve(valueLimit: Int): Long = {
-    var n, value, sum = 0
-    
-    while (value < valueLimit) {
-      n += 1
-      value = fib(n)
-      if (value % 2 == 0) 
-        sum += value
-    }
-    sum
+    var i = -1
+    Stream.continually {i += 1; fib(i)}
+      .takeWhile(_ <= valueLimit)
+      .filter(_ % 2 == 0)
+      .reduceLeft((a: Int, b: Int) => a + b)
   }
 
 }

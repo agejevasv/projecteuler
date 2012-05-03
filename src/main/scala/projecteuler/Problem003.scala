@@ -12,9 +12,7 @@ object Problem003 {
   }
   
   def solve(n:Double): Int = {
-    val root = floor(sqrt(n))
-    
-    for (i <- root to 1 by -1)
+    for (i <- floor(sqrt(n)) to 1 by -1)
       if (n % i == 0 && isPrime(i))
         return i.toInt
     1

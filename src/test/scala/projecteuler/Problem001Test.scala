@@ -12,5 +12,9 @@ class Problem001Test {
   @Test def solution() {
     assertEquals(233168, Problem001.solve(1000))
   }
+  
+  @Test def solution2() {
+    assertEquals(233168, Problem001.solve2(1000))
+  }
 
 }

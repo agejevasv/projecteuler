@@ -21,5 +21,7 @@ class SieveOfEratosthenes(val n: Int) {
 }
 
 object SieveOfEratosthenes {
-  def apply(n: Int) = new SieveOfEratosthenes(n)
+  
+  def apply(n: Int = 10000) = new SieveOfEratosthenes(n)
+  
 }

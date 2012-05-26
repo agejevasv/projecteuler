@@ -13,7 +13,7 @@ object Problem002 {
       .map(i => fib(i))
       .takeWhile(_ <= valueLimit)
       .filter(_ % 2 == 0)
-      .reduceLeft((a: Int, b: Int) => a + b)
+      .reduceLeft(_ + _)
   }
 
 }

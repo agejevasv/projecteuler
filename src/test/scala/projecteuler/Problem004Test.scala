@@ -14,7 +14,7 @@ class Problem004Test {
   }
 
   @Test def solution() {
-    assertEquals(909909, Problem004.solve())
+    assertEquals(906609, Problem004.solve())
   }
 
 }

@@ -2,18 +2,14 @@ package projecteuler
 
 object Problem004 {
 
-  def isPalindrome(number: Int): Boolean = {
-    // ugly procedural impl, try some functional approach
-    var n = number;
-    var reversed = 0;
+  def isPalindrome(number: Int) =
+     number == reverse(number)
 
-    while (n > 0) {
-      reversed = (reversed * 10) + (n % 10);
-      n /= 10;
-    }
-
-    number == reversed
-  }
+  def reverse(number: Int, reversed: Int = 0): Int =
+    if (number == 0)
+      reversed
+    else
+      reverse(number / 10, reversed * 10 + number % 10)
 
   def solve(): Int = {
     val palindromes = for (
